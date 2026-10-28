@@ -6,6 +6,10 @@ __pycache__/
 # Segredos
 .env
 
+# Material de apoio pessoal (PDF do desafio, cronograma, notas de estudo)
+# nao faz parte da entrega, fica so local
+_apoio/
+
 # Dados brutos (baixados do Kaggle, nao versionados)
 data/raw/*.csv
 data/processed/*.csv
