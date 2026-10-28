@@ -1,0 +1,29 @@
+# Tech Challenge Fase 4 - Voice of Customer Intelligence com RAG
+#
+# Embeddings e LLM via API (Gemini), sem dependencias pesadas de ML local
+# (sem torch/transformers). Instalacao leve, pensada para o prazo curto.
+#
+# Setup:
+#   python3 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements.txt
+
+# --- Dados ---
+pandas>=2.2
+numpy>=2
+
+# --- RAG / LangChain ---
+langchain>=1.4,<2.0
+langchain-core>=1.6,<2.0
+langchain-text-splitters>=1.0,<2.0
+langchain-google-genai>=4.4,<5.0
+langchain-community>=0.4.2,<0.5
+faiss-cpu>=1.9
+
+# --- Utilitarios ---
+python-dotenv>=1.2.2
+tqdm
+
+# --- Notebooks (EDA) ---
+jupyterlab>=4.2
+ipykernel

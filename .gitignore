@@ -1,0 +1,21 @@
+# Ambiente
+.venv/
+__pycache__/
+*.pyc
+
+# Segredos
+.env
+
+# Dados brutos (baixados do Kaggle, nao versionados)
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.parquet
+
+# Indice vetorial gerado localmente
+data/processed/faiss_index/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# SO / editor
+.DS_Store
