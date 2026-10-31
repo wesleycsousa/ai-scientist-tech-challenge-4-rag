@@ -11,6 +11,7 @@
 # --- Dados ---
 pandas>=2.2
 numpy>=2
+pyarrow>=18  # engine parquet usado pelo pandas (data/processed)
 
 # --- RAG / LangChain ---
 langchain>=1.4,<2.0
