@@ -25,5 +25,8 @@ data/processed/indice_checkpoint_lote.txt
 # Jupyter
 .ipynb_checkpoints/
 
+# Cache do pytest
+.pytest_cache/
+
 # SO / editor
 .DS_Store

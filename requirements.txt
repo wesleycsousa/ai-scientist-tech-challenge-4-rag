@@ -28,3 +28,6 @@ tqdm
 # --- Notebooks (EDA) ---
 jupyterlab>=4.2
 ipykernel
+
+# --- Testes ---
+pytest>=8.3
