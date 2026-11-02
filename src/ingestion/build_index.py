@@ -6,11 +6,10 @@ import unicodedata
 import pandas as pd
 from dotenv import load_dotenv
 from langchain_community.vectorstores import FAISS
-from langchain_community.vectorstores.utils import DistanceStrategy
 from langchain_core.documents import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
-from embeddings_lotes import gerar_embeddings_em_lotes
+from embeddings_lotes import gerar_indice_em_lotes
 
 CAMINHO_REVIEWS_RAW = "data/raw/olist_order_reviews_dataset.csv"
 CAMINHO_REVIEWS_LIMPO = "data/processed/reviews_limpo.parquet"
@@ -106,11 +105,8 @@ def criar_embeddings() -> GoogleGenerativeAIEmbeddings:
 
 
 def indexar(documentos: list[Document], embeddings: GoogleGenerativeAIEmbeddings) -> FAISS:
-    """Gera os embeddings (ver embeddings_lotes.py) e monta o indice FAISS com similaridade de cosseno."""
-    pares_texto_vetor, metadados = gerar_embeddings_em_lotes(documentos, embeddings)
-    return FAISS.from_embeddings(
-        pares_texto_vetor, embeddings, metadatas=metadados, distance_strategy=DistanceStrategy.COSINE
-    )
+    """Gera os embeddings e monta o indice FAISS com similaridade de cosseno (ver embeddings_lotes.py)."""
+    return gerar_indice_em_lotes(documentos, embeddings)
 
 
 if __name__ == "__main__":

@@ -19,10 +19,14 @@ data/processed/*.parquet
 data/processed/faiss_index/
 
 # Checkpoint da geracao de embeddings (ver embeddings_lotes.py)
-data/processed/embeddings_checkpoint.pkl
+data/processed/indice_checkpoint/
+data/processed/indice_checkpoint_lote.txt
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Cache do pytest
+.pytest_cache/
 
 # SO / editor
 .DS_Store

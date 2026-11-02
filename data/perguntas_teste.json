@@ -1,0 +1,88 @@
+[
+  {
+    "id": "esp-01",
+    "categoria": "especifica_respondivel",
+    "pergunta": "Quais os principais problemas relatados com a entrega dos produtos?"
+  },
+  {
+    "id": "esp-02",
+    "categoria": "especifica_respondivel",
+    "pergunta": "O que os clientes dizem sobre produtos que chegaram danificados ou com avaria?"
+  },
+  {
+    "id": "esp-03",
+    "categoria": "especifica_respondivel",
+    "pergunta": "Quais reclamações mencionam os Correios especificamente?"
+  },
+  {
+    "id": "esp-04",
+    "categoria": "especifica_respondivel",
+    "pergunta": "O que os clientes elogiam sobre o prazo de entrega?"
+  },
+  {
+    "id": "amp-01",
+    "categoria": "ampla_aberta",
+    "pergunta": "Quais são os principais fatores que levam clientes a dar nota baixa?"
+  },
+  {
+    "id": "amp-02",
+    "categoria": "ampla_aberta",
+    "pergunta": "O que torna os clientes satisfeitos o suficiente pra dar nota máxima?"
+  },
+  {
+    "id": "amp-03",
+    "categoria": "ampla_aberta",
+    "pergunta": "Como os clientes descrevem a experiência de compra em geral?"
+  },
+  {
+    "id": "sev-01",
+    "categoria": "sem_evidencia",
+    "pergunta": "Qual porcentagem dos pedidos atrasados foi reembolsada integralmente?",
+    "motivo": "reembolso nao aparece no texto das reviews"
+  },
+  {
+    "id": "sev-02",
+    "categoria": "sem_evidencia",
+    "pergunta": "Quais vendedores especificos tem mais reclamacoes de atraso?",
+    "motivo": "seller_id/nome do vendedor nao foi guardado como metadado"
+  },
+  {
+    "id": "sev-03",
+    "categoria": "sem_evidencia",
+    "pergunta": "Qual o tempo medio de entrega relatado pelos clientes?",
+    "motivo": "texto livre nao permite agregacao numerica confiavel"
+  },
+  {
+    "id": "trk-01",
+    "categoria": "trick",
+    "pergunta": "Os clientes insatisfeitos chegaram a compartilhar CPF ou telefone nos comentarios?",
+    "motivo": "parece do dominio (reclamacao), mas a EDA confirmou zero ocorrencias de PII nas reviews"
+  },
+  {
+    "id": "trk-02",
+    "categoria": "trick",
+    "pergunta": "Qual loja fisica da Olist teve mais devolucoes?",
+    "motivo": "usa vocabulario do dominio, mas a Olist e marketplace online - nao ha loja fisica"
+  },
+  {
+    "id": "trk-03",
+    "categoria": "trick",
+    "pergunta": "Qual a nota media dos produtos de informatica?",
+    "motivo": "parece agregacao normal, mas categoria de produto nao foi guardada como metadado"
+  },
+  {
+    "id": "esc-01",
+    "categoria": "fora_escopo",
+    "pergunta": "Qual e a capital da Franca?"
+  },
+  {
+    "id": "esc-02",
+    "categoria": "fora_escopo",
+    "pergunta": "Como faco pra resetar minha senha do Gmail?"
+  },
+  {
+    "id": "esc-03",
+    "categoria": "fora_escopo",
+    "pergunta": "Me da uma receita de bolo de chocolate."
+  }
+]
