@@ -17,8 +17,8 @@ from langchain_community.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 from build_index import CAMINHO_FAISS_INDEX, MODELO_EMBEDDING
-from pipeline import RespostaRAG, criar_llm_geracao, gerar_resposta, validar_citacoes
-from retriever import criar_llm, recuperar
+from pipeline import RespostaRAG, criar_llm_geracao, responder
+from retriever import criar_llm
 
 
 def carregar_indice() -> FAISS:
@@ -32,6 +32,8 @@ def imprimir_resposta(resposta: RespostaRAG) -> None:
         print("Evidências usadas:")
         for evidencia in resposta.evidencias:
             print(f"  - [{evidencia.review_id}] nota {evidencia.nota} ({evidencia.data}): {evidencia.trecho}")
+    elif resposta.motivo_recusa:
+        print(f"(recusa - motivo: {resposta.motivo_recusa})")
     print()
 
 
@@ -47,11 +49,8 @@ def main() -> None:
         if not pergunta:
             continue
 
-        documentos_e_scores = recuperar(pergunta, indice, llm_retrieval)
-        resposta = gerar_resposta(pergunta, documentos_e_scores, llm_geracao)
-
         try:
-            resposta = validar_citacoes(resposta, documentos_e_scores)
+            resposta = responder(pergunta, indice, llm_retrieval, llm_geracao)
         except ValueError:
             print("\nNão consegui confirmar a evidência desta resposta - tente reformular a pergunta.\n")
             continue
