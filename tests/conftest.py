@@ -6,5 +6,6 @@ import sys
 from pathlib import Path
 
 RAIZ = Path(__file__).parent.parent
+sys.path.insert(0, str(RAIZ / "src" / "generation"))
 sys.path.insert(0, str(RAIZ / "src" / "retrieval"))
 sys.path.insert(0, str(RAIZ / "src" / "ingestion"))
