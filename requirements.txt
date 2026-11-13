@@ -11,6 +11,7 @@
 # --- Dados ---
 pandas>=2.2
 numpy>=2
+pyarrow>=18  # engine parquet usado pelo pandas (data/processed)
 
 # --- RAG / LangChain ---
 langchain>=1.4,<2.0
@@ -27,3 +28,6 @@ tqdm
 # --- Notebooks (EDA) ---
 jupyterlab>=4.2
 ipykernel
+
+# --- Testes ---
+pytest>=8.3
