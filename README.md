@@ -3,8 +3,7 @@
 > Tech Challenge - Fase 4 - POSTECH IA para Devs / Data Science
 > Status: em finalização para a entrega
 >
-> **Vídeo de apresentação:** [assistir](ADICIONAR_LINK) <!-- preencher após a gravação -->
-> **Slides da apresentação:** [abrir](ADICIONAR_LINK) <!-- preencher antes da entrega -->
+> **Vídeo e slides da apresentação:** [abrir pasta no Drive](https://drive.google.com/drive/folders/1eAlhzdvEFnE07vuw1japTQTLTvGnaA-R?usp=sharing)
 
 ## Descrição do projeto
 
